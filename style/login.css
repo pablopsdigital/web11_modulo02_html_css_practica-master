@@ -1,0 +1,250 @@
+/*================================== General ==================================*/
+body {
+  background-image: linear-gradient(
+      0deg,
+      rgba(20, 20, 20, 1) 0%,
+      rgba(20, 20, 20, 0.3) 50%,
+      rgba(0, 59, 253, 0) 100%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.2) 100%),
+    url("../src/films/slider_01.jpg");
+  height: 100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*================================== Grid ==================================*/
+.grid-login {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template:
+    "header" 100px
+    "main" auto
+    "footer" 100px;
+}
+
+/*================================== Header ==================================*/
+.header {
+  margin-top: 5em;
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+}
+
+.header .brand {
+  max-width: 175px;
+}
+
+/*================================== Main ==================================*/
+.main {
+  grid-area: main;
+  align-items: auto;
+  justify-self: center;
+}
+
+.login-container {
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(50px);
+  width: 470px;
+  border-radius: 0.5em;
+  padding: 3em;
+  color: white;
+
+  -webkit-box-shadow: 0px 0px 50px -1px rgba(68, 68, 68, 0.38);
+  box-shadow: 0px 0px 50px -1px rgba(68, 68, 68, 0.38);
+}
+
+.main .login-container h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.form-container .input-email,
+.form-container .input-password {
+  padding: 0em 2em;
+  margin: 1em 0 2em 0;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  background-color: #333;
+  font-weight: 200;
+  height: 60px;
+  width: 100%;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  color: white;
+  font-size: 1em;
+}
+
+.form-container .input-submit {
+  text-decoration: none;
+  margin: 1em 0;
+  padding: 1.25em 3em;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-container .input-submit:hover {
+  background-color: var(--hover);
+}
+
+.form-container .form-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-container .recaptcha-container {
+  margin-top: 1em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-container .recaptcha-container p {
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.form-container .recaptcha-container p a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+/*================================== Check ==================================*/
+.form-container .form-footer #remember input[type="checkbox"] {
+  color: transparent;
+}
+.form-container .form-footer input[type="checkbox"] {
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  bottom: 2px;
+}
+.form-container .form-footer input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-radius: 0.25em;
+  background-color: var(--gray);
+}
+.form-container .form-footer input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  left: 7px;
+}
+
+.form-container .form-footer input[type="checkbox"]:checked + label {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.form-container .form-footer a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+/*================================== Footer ==================================*/
+.footer {
+  grid-area: footer;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 5em;
+}
+
+.footer .footer-navbar ul li {
+  list-style: none;
+  display: inline;
+  padding: 1em;
+}
+
+.footer .footer-navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .footer-navbar ul li a:hover {
+  color: var(--hover);
+}
+
+/*================================== Media ==================================*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .header {
+    justify-self: start;
+    margin-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  .main .login-container {
+    padding: 01em;
+  }
+
+  .login-container {
+    background-color: var(--background);
+    width: 100vw;
+    box-shadow: none;
+  }
+
+  .footer .footer-navbar {
+    margin: 2em 0;
+  }
+
+  .footer .footer-navbar ul li {
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

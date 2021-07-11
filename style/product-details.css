@@ -1,0 +1,185 @@
+/*================================== Grid and General ==================================*/
+.main {
+  display: grid;
+  grid-template-areas:
+    "trailer"
+    "info-flim"
+    "info-actors"
+    "related";
+  margin-top: -500px;
+}
+
+/*================================== Trailer ==================================*/
+.trailer {
+  grid-area: trailer;
+}
+
+.trailer .video-trailer {
+  max-width: 90vw;
+  display: block;
+  margin: 0 auto;
+}
+
+/*================================== Info flim ==================================*/
+.main .info-flim-grid {
+  grid-area: info-flim;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3em;
+  margin: 3em 0;
+  max-width: 1400px;
+}
+
+.main .info-flim-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0em;
+}
+
+.main .info-flim-right {
+  color: white;
+  line-height: 1.5rem;
+  padding: 1em;
+}
+
+.main .info-flim-right p {
+  padding-bottom: 1em;
+}
+
+/*================================== Actors cards ==================================*/
+.main .actors-cards {
+  grid-area: info-actors;
+  overflow: hidden;
+  max-width: 1400px;
+  justify-self: center;
+}
+
+.main .actors-cards .section-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  padding: 0.5em 0;
+  margin-top: 2em;
+}
+
+.main .actors-cards-list {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+
+.main .actors-cards ul {
+  display: flex;
+}
+
+/*Custom scroll bar*/
+.main .actors-cards-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 6px;
+  background-color: var(--gray);
+  border-radius: 50px;
+}
+
+/*Custom scroll bar*/
+.main .actors-cards-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 50px;
+}
+
+.main .actor-card {
+  height: 350px;
+  width: 200px;
+  padding-bottom: 10px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 1em;
+  text-align: left;
+  transition: all 0.25s;
+  background-color: white;
+}
+
+.main .actor-card:first-child {
+  margin-left: 0;
+}
+
+.main .actor-card:last-child {
+  margin-left: 0;
+}
+
+.main .actor-card:hover {
+  transform: translateY(15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.main .actor-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.main .actor-card .actor-img {
+  width: 330px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.main .actor-card .actor-card-info {
+  padding: 1em;
+}
+
+.main .actor-card a {
+  text-decoration: none;
+}
+
+.main .actor-name {
+  color: var(--background);
+  font-weight: 700;
+  font-size: 1em;
+  padding-bottom: 8px;
+}
+
+.main .actor-character {
+  font-size: 0.95em;
+  color: var(--gray);
+}
+
+.main .related {
+  grid-area: related;
+}
+
+.related .title-list {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2.5em;
+}
+
+/*================================== Media ==================================*/
+@media only screen and (max-width: 600px) {
+  .main {
+    margin-top: -400px;
+  }
+
+  .main .info-flim-grid {
+    grid-template-columns: 1fr;
+    margin: 0em;
+  }
+
+  .related {
+    grid-template-columns: 1fr;
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .main {
+    margin-top: -550px;
+  }
+  .main .info-flim-grid {
+    grid-template-columns: 1fr;
+    margin: 0em;
+  }
+}

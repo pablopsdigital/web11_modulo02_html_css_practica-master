@@ -1,0 +1,216 @@
+/*================================== Menu ==================================*/
+.navigation {
+  width: 100%;
+  padding: 12px 0;
+}
+
+.navigation .navigation-content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation .navigation-content .brand {
+  display: flex;
+}
+
+.navigation-content .brand .brand-img {
+  max-width: 175px;
+  text-align: left;
+}
+.navigation-content .brand .brand-img:hover {
+  transform: translateY(8px);
+  transition: 0.4s ease-out;
+}
+.navigation-content ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-content ul li {
+  padding: 0.25em 0.25em;
+}
+
+.navigation-content ul a {
+  margin: 0 8px;
+  text-decoration: none;
+  font-size: 1em;
+  color: white;
+  font-weight: 400;
+  display: inline-flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navigation-content ul li a:hover {
+  color: #3498db;
+}
+
+/*================================== Config check simulation open/close menu ==================================*/
+.navigation label.button {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.navigation label.button::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+}
+
+.navigation .open-menu {
+  position: absolute;
+  top: -2px;
+  right: 2.5em;
+  width: 30px;
+}
+
+.navigation .close-menu {
+  position: absolute;
+  top: -2px;
+  right: 2.5em;
+  width: 30px;
+}
+
+.navigation label.close-menu {
+  position: absolute;
+  top: 4px;
+  right: 30px;
+}
+
+#responsive-menu {
+  display: none;
+}
+
+.navigation .login-button {
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 0.5em;
+  min-width: 150px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary);
+}
+
+.navigation-content ul li a:hover:last-child {
+  color: white;
+  background-color: var(--hover);
+}
+
+/*================================== Search ==================================*/
+.search {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin: 0 0 0 1em;
+}
+
+.search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: transparent;
+  border: solid 1px var(--gray);
+  color: white;
+  outline: none;
+  border-radius: 0.5em;
+  padding: 0 10px 0 45px;
+  backdrop-filter: blur(50px);
+  padding: 0em 2em 0em 4em;
+  font-size: 1em;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+}
+
+.search .icon-search {
+  color: white;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 35px;
+  transform: 10px;
+  padding-right: 10px;
+  z-index: 2;
+}
+
+.login .login-icon img {
+  cursor: pointer;
+  font-weight: 500;
+  width: 45px;
+}
+
+/*================================== Media ==================================*/
+@media (max-width: 940px) {
+  .navigation ul {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    max-width: 400px;
+    padding-top: 100px;
+    height: 100vh;
+    background: var(--background);
+    z-index: 20;
+    transition: all 0.3s ease;
+  }
+
+  .navigation ul li a {
+    display: block;
+    font-size: 23px;
+    box-shadow: none;
+    margin: 20px 10px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navigation ul a:hover:before {
+    box-shadow: none;
+  }
+  .navigation label.open-menu {
+    display: block;
+  }
+  #responsive-menu:checked ~ label.open-menu {
+    display: none;
+  }
+  #responsive-menu:checked ~ ul label.close-menu {
+    display: block;
+  }
+  #responsive-menu:checked ~ ul {
+    left: 0;
+  }
+
+  .navigation .login-button {
+    margin: 2em 3em;
+  }
+
+  .search {
+    width: 76%;
+    margin: 2em 3em;
+
+    /* margin-top: 1em;
+    left: 70px;
+    width: 70%; */
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .navigation-content ul a {
+    margin: 0 4px;
+    padding: 0;
+  }
+}

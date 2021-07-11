@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="347" height="83.891" viewBox="0 0 347 83.891">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-73 -228.524)">
+    <text id="Film" transform="translate(73 297)" fill="#fff" font-size="50" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">FILM</tspan></text>
+    <text id="rama" transform="translate(258 297)" fill="#fff" font-size="50" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">RAMA</tspan></text>
+    <g id="pelicula" transform="matrix(-0.839, 0.545, -0.545, -0.839, 277.061, 274.635)">
+      <path id="Trazado_1" data-name="Trazado 1" d="M42.538,148.617a49.294,49.294,0,0,1-16.981-2.787,43.15,43.15,0,0,1-14.353-8.28A42.62,42.62,0,0,1,.121,121.935,1.537,1.537,0,0,1,.984,119.9l2.675-1.031a1.534,1.534,0,0,1,1.964.827,36.724,36.724,0,0,0,9.5,13.392,35.054,35.054,0,0,0,3.5,2.7,27.489,27.489,0,1,1,23.917,12.826ZM26.544,114.376a6.762,6.762,0,1,0,6.762,6.762A6.762,6.762,0,0,0,26.544,114.376ZM41.88,99.041a6.762,6.762,0,1,0,6.762,6.762A6.762,6.762,0,0,0,41.88,99.041Zm0,30.67a6.762,6.762,0,1,0,6.762,6.762A6.762,6.762,0,0,0,41.88,129.712Zm22.1-8.573a6.762,6.762,0,1,0-6.762,6.762A6.762,6.762,0,0,0,63.977,121.138Z" transform="translate(0.001 -93.651)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

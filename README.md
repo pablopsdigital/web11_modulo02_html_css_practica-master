@@ -49,3 +49,13 @@ Por otro lado se ha procurado mantener la mejor experiencia en cada uno de los d
 ![enter image description here](./readme/device_index.png)
 
 ![enter image description here](./readme/device_catalog.png)
+
+## Aspectos mejorables
+- Una mejor organización de los ficheros y directorios
+- Una mejor optimización de los recursos
+- Mayor cohesión y lógica en el diseño estructural del html y css para nantener la consistencia
+- Mejorar los media query de ruptura para un mejora ajuste a dispositivos
+- Estilos del scroll horizontal unificados en diferentes navegadores
+- Realizar un versionado por páginas completas
+- Crear estilos y variables unificadas para aspectos generales
+- 

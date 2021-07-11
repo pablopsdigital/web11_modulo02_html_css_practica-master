@@ -45,6 +45,7 @@ En cuanto a los recursos gráficos y textuales se ha utilizado la base de datos 
 
 Se debe atender que la práctica no es completamente funcional en cuanto a navegación y enlazado de elementos.
 Por otro lado se ha procurado mantener la mejor experiencia en cada uno de los dispositivos.
+
 ![enter image description here](./readme/device_index.png)
 
 ![enter image description here](./readme/device_catalog.png)
